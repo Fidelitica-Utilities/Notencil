@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="ja">
 
+<script src="./res/script.js" defer></script>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,11 +20,31 @@
                 <img src="res/notencil_icon5.png" width="36" height="36" alt="">
                 <span>Notencil</span>
             </a>
+
             <nav class="navlinks" aria-label="メインナビゲーション">
-                <a href="#why">Notencilについて</a>
-                <a href="#open-source">オープンソース</a>
+                <!-- 言語切り替えコンボボックス -->
+                <div class="lang-picker">
+                    <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                        </path>
+                    </svg>
+                    <select id="langSwitch" aria-label="言語選択">
+                        <option value="en">English</option>
+                        <option value="ja">日本語</option>
+                    </select>
+                    <span class="select-arrow">▼</span>
+                </div>
                 <a class="nav-cta" href="https://github.com/search?q=Notencil&type=repositories" target="_blank"
-                    rel="noreferrer">GitHubを見る
+                    rel="noreferrer">
+                    <svg class="cta-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.08c-3.1.67-3.75-1.32-3.75-1.32-.5-1.28-1.24-1.62-1.24-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.15 1.7 1.15.99 1.69 2.59 1.2 3.22.91.1-.72.39-1.2.7-1.48-2.47-.28-5.07-1.24-5.07-5.5 0-1.21.43-2.2 1.15-2.97-.12-.28-.5-1.41.11-2.93 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.12-1.44 3.04-1.14 3.04-1.14.61 1.52.23 2.65.12 2.93.71.77 1.14 1.76 1.14 2.97 0 4.27-2.6 5.21-5.08 5.49.4.34.75 1.02.75 2.06v3.07c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z" />
+                    </svg>
+                    GitHub
                     <span class="arrow">↗</span>
                 </a>
             </nav>
@@ -181,10 +203,12 @@
         </section>
         <section class="open-source" id="open-source">
             <div class="wrap">
-                <div class="github-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <div class="github-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path
                             d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.08c-3.1.67-3.75-1.32-3.75-1.32-.5-1.28-1.24-1.62-1.24-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.15 1.7 1.15.99 1.69 2.59 1.2 3.22.91.1-.72.39-1.2.7-1.48-2.47-.28-5.07-1.24-5.07-5.5 0-1.21.43-2.2 1.15-2.97-.12-.28-.5-1.41.11-2.93 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.12-1.44 3.04-1.14 3.04-1.14.61 1.52.23 2.65.12 2.93.71.77 1.14 1.76 1.14 2.97 0 4.27-2.6 5.21-5.08 5.49.4.34.75 1.02.75 2.06v3.07c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z" />
-                    </svg></div>
+                    </svg>
+                </div>
                 <div class="kicker">OPEN SOURCE, OPEN TO EVERYONE</div>
                 <h2>オープンソースだから、安心。</h2>
                 <p>Notencilのソースコードは公開されています。誰でも中身を確かめ、自由に使い、より良くすることに参加できます。ノートの未来を、一緒につくりませんか。</p><a
@@ -199,8 +223,8 @@
                 <img src="res/notencil_icon5.png" width="36" height="36" alt="">
                 <span> Notencil </span>
             </a>
-            <a href="terms.html"> <span class="copyright"> 利用規約 </span> </a>
-            <a href="privacy.html"> <span class="copyright"> プライバシーポリシー </span> </a>
+            <a href="./terms.html"> <span class="copyright"> Terms of service </span> </a>
+            <a href="./privacy.html"> <span class="copyright"> Privacy policy </span> </a>
             <span class="copyright">© 2026 Fidelitica Utilities</span>
         </div>
     </footer>

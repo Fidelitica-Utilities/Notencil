@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="ja">
 
+<script src="./res/script.js" defer></script>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f5f8ff">
     <meta name="description" content="手書きノートの不満を解決する、オープンソースのノートアプリ Notencil。ファイルはあなたの手元に。PDFにそのまま書き込み。買い切りで、ずっと自由に。">
-    <title>Notencil | 利用規約</title>
+    <title>Notencil | Terms of Service</title>
     <link rel="icon" href="res/notencil.ico">
     <link rel="stylesheet" href="res/site.css">
 </head>
@@ -14,15 +16,32 @@
 <body>
     <header class="site-header">
         <div class="wrap nav">
-            <a class="brand" href="#top" aria-label="Notencil ホーム">
+            <a class="brand" href="./index.html" aria-label="Notencil ホーム">
                 <img src="res/notencil_icon5.png" width="36" height="36" alt="">
                 <span>Notencil</span>
             </a>
             <nav class="navlinks" aria-label="メインナビゲーション">
-                <a href="#why">Notencilについて</a>
-                <a href="#open-source">オープンソース</a>
+                <!-- 言語切り替えコンボボックス -->
+                <div class="lang-picker">
+                    <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                        </path>
+                    </svg>
+                    <select id="langSwitch_terms" aria-label="言語選択">
+                        <option value="en">English</option>
+                        <option value="ja">日本語</option>
+                    </select>
+                    <span class="select-arrow">▼</span>
+                </div>
                 <a class="nav-cta" href="https://github.com/search?q=Notencil&type=repositories" target="_blank"
-                    rel="noreferrer">GitHubを見る
+                    rel="noreferrer"><svg class="cta-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.08c-3.1.67-3.75-1.32-3.75-1.32-.5-1.28-1.24-1.62-1.24-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.15 1.7 1.15.99 1.69 2.59 1.2 3.22.91.1-.72.39-1.2.7-1.48-2.47-.28-5.07-1.24-5.07-5.5 0-1.21.43-2.2 1.15-2.97-.12-.28-.5-1.41.11-2.93 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.12-1.44 3.04-1.14 3.04-1.14.61 1.52.23 2.65.12 2.93.71.77 1.14 1.76 1.14 2.97 0 4.27-2.6 5.21-5.08 5.49.4.34.75 1.02.75 2.06v3.07c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z" />
+                    </svg>GitHub
                     <span class="arrow">↗</span>
                 </a>
             </nav>
@@ -31,75 +50,104 @@
     <main id="top">
         <section class="hero" id="">
             <div class="wrap">
-                <h2>Notencil 利用規約</h2>
+                <h2>Notencil Terms of Service</h2>
                 <p>
-                    本利用規約（以下「本規約」）は、Fidelitica
-                    Utilities（以下「開発者」）が提供するアプリケーション「Notencil」（以下「本アプリ」）、関連ソフトウェア、ファイルフォーマット仕様、および公式Webサイト（以下総称して「本サービス」）の利用条件を定めるものです。<br>
-                    利用者の皆様（以下「ユーザー」）は、本規約に同意した上で本サービスをご利用ください。
+                    These Terms of Service (hereinafter referred to as the "Terms") set forth the terms and conditions
+                    for the use of the "Notencil" application (hereinafter referred to as the "App"), related software,
+                    file format specifications, and the official website (collectively referred to as the "Service")
+                    provided by Fidelitica Utilities (hereinafter referred to as the "Developer"). Users (hereinafter
+                    referred to as "Users") must agree to these Terms before using the Service.
                 </p>
             </div>
         </section>
 
-        <section class="privacy-policy">
+        <section class="terms">
             <div class="wrap">
-                <h3>第1条（規約への同意と本アプリの性質）</h3>
-                ユーザーは、本アプリをダウンロード、インストール、または利用することにより、本規約のすべての条項に同意したものとみなされます。
+                <h3>Article 1 (Agreement to Terms and Nature of the App)</h3>
+                By downloading, installing, or using the App, Users are deemed to have agreed to all provisions of these
+                Terms.
                 <br>
-                本アプリは現在開発途上（プレビュー版／ベータ版）のソフトウェアです。
-                機能の不具合、動作の停止、予期せぬ挙動、または将来のアップデートに伴う仕様やUIの大幅な変更が含まれる可能性があります。ユーザーは、本アプリが未完成の性質を持つことを十分に理解・了承した上で、自己の責任において利用するものとします。
+                The App is currently software in active development (preview / beta stage). It may contain bugs,
+                defects, unexpected behaviors, service interruptions, or significant changes to specifications and user
+                interfaces in future updates. Users fully acknowledge and agree to the unfinished nature of the App and
+                shall use it at their own risk.
 
-                <h3>第2条（プライバシーおよびデータの非収集）</h3>
-                開発者は、本アプリを通じてユーザーの個人情報、入力内容、手書きデータ、読み込んだPDFファイル、および設定情報を収集・監視・把握することはありません。また、これらを開発者のサーバー等に送信・保管する技術的仕組みを有していません。
-
-                本アプリ上で作成・編集されたすべてのデータは、ユーザーのローカルデバイスまたはユーザー自身が管理するストレージ環境にのみ保存されます。
-
-                <h3>第3条（知的財産権およびオープンソースライセンス）</h3>
-                本サービスを構成するプログラム、グラフィック、ロゴ、アイコン、文書等に関する著作権、商標権、その他一切の知的財産権は、別段の定めがない限り開発者または正当な権利者に帰属します。
+                <h3>Article 2 (Privacy and Non-Collection of Data)</h3>
+                The Developer does not collect, monitor, or track Users' personal information, input content,
+                handwritten stroke data, imported PDF files, or application configuration settings through the App.
+                Furthermore, the Developer does not possess any technical mechanisms to transmit or store such data on
+                external servers.
                 <br>
-                本アプリまたは関連コンポーネントのうち、オープンソースライセンス（Apache License 2.0、MIT
-                License等）に基づきソースコードが公開されている部分については、当該オープンソースライセンスの条項が本規約に優先して適用され、ユーザーはライセンスの許諾範囲内で自由に複製、改変、再頒布を行うことができます。
+                All data created or edited within the App is stored exclusively on the User's local device or within
+                storage environments managed directly by the User.
 
-                <h3>第4条（互換製品および商標の取り扱い）</h3>
-                「Notencil」の名称、ロゴ、および関連する標章は開発者の識別標識です。開発者の事前の明示的な許可なく、公式製品であると誤認・混同させる態様でこれらを使用することは禁止します。
+                <h3>Article 3 (Intellectual Property Rights and Open-Source Licensing)</h3>
+                Unless otherwise specified, all copyrights, trademarks, and other intellectual property rights in and to
+                the programs, graphics, logos, icons, documentation, and other materials comprising the Service belong
+                to the Developer or legitimate rights holders.<br>
+                For parts of the App or related components whose source code is made publicly available under
+                open-source licenses (such as the Apache License 2.0, MIT License, etc.), the terms of the applicable
+                open-source license shall take precedence over these Terms. Users are free to copy, modify, and
+                redistribute those parts within the scope permitted by such licenses.
 
-                <h4>【互換表記の特例】 </h4>
-                サードパーティ製ソフトウェア、拡張機能、または関連ツールが、本アプリのファイルフォーマット（.ntlb
-                等）との完全な相互運用性およびデータ構造の完全互換性を技術的に担保している場合に限り、当該成果物において「Notencil互換」または「Compatible with
-                Notencil」と表記することを許諾します。ただし、この表記は互換性を示す事実に限られるものとし、開発者による公認、推奨、または提携を意味するものではありません。
+                <h3>Article 4 (Compatible Products and Trademark Usage)</h3>
+                The "Notencil" name, logo, and related marks are distinctive identifiers belonging to the Developer.
+                Using these marks in a manner likely to cause confusion, mislead others into believing a product is
+                official, or imply endorsement without prior explicit permission from the Developer is strictly
+                prohibited.
 
-                <h3>第5条（保証の否認および免責事項）</h3>
-                本アプリは「現状有姿（AS IS）」かつ「提供可能な限度」で提供されます。
-                開発者は、本アプリにエラー、バグ、不具合、中断が生じないこと、ならびに特定目的への適合性や有用性について、明示的にも黙示的にも一切保証いたしません。
+                <h4>[Exception for Compatibility Statements]</h4>
+                Third-party software, extensions, or related tools may state "Notencil互換" or "Compatible with Notencil"
+                if and only if they technically ensure full interoperability and structural data compatibility with the
+                App's file format (such as .ntlb). However, such phrasing must strictly represent factual compatibility
+                and does not imply official endorsement, certification, sponsorship, or affiliation by the Developer.
 
-                <h4>【データ破損・消失の免責】</h4>
-                本アプリの利用、不具合、強制終了、クラッシュ、またはアップデート等に起因して生じた、作成中または保存済みのノートデータ、PDFファイル、設定内容等の破損、消失、変更、その他の損害について、開発者は一切の責任を負いません。
-                重要なデータについては、ユーザー自身の責任において定期的にバックアップを行ってください。
+                <h3>Article 5 (Disclaimer of Warranties and Limitation of Liability)</h3>
+                THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE." The Developer makes no warranties of any kind,
+                whether express or implied, including but not limited to warranties of merchantability, fitness for a
+                particular purpose, non-infringement, or that the App will be free from errors, bugs, defects, or
+                interruptions.
+
+                <h4>[Disclaimer Regarding Data Loss and Corruption]</h4>
+                The Developer shall not be held liable for any damages, corruption, loss, or alteration of note data,
+                PDF files, configuration settings, or other content—whether in progress or previously saved—arising out
+                of or related to the use, malfunction, unexpected termination, crash, or update of the App. Users bear
+                full responsibility for regularly backing up their critical data.
                 <br>
-                ユーザーが本アプリのデータをクラウドストレージ（OneDrive、Google
-                Drive等）で同期・保存したことに起因するファイルの競合、同期不全、または消失について、開発者は何ら関与せず、責任を負いません。
+                The Developer assumes no responsibility or liability for file conflicts, synchronization failures, data
+                corruption, or loss resulting from saving or syncing the App's files via third-party cloud storage
+                services (such as OneDrive, Google Drive, etc.).
 
-                <h3>第6条（禁止事項）</h3>
-                ユーザーは、本サービスの利用にあたり、以下の行為を行ってはなりません。
+                <h3>Article 6 (Prohibited Acts)</h3>
+                Users shall not engage in any of the following acts when using the Service:
                 <ol>
-                    <li>法令または公序良俗に違反する行為、あるいは犯罪行為に関連する利用。</li>
-                    <li>開発者または第三者の知的財産権、名誉、プライバシーを侵害する行為。</li>
-                    <li>公開されていない開発者インフラや配布基盤（ストアAPI等）への不正アクセス、または過剰な負荷をかける行為。</li>
-                    <li>本アプリがオープンソースライセンスを適用していない部分について、不当に開発者の権利を害する行為。</li>
+                    <li>Acts that violate laws, public order, or good morals, or activities connected to criminal
+                        offenses.</li>
+                    <li>Acts that infringe upon the intellectual property rights, reputation, privacy, or other rights
+                        of the Developer or any third party.</li>
+                    <li>Unauthorized access to, or placing an excessive load on, unreleased developer infrastructure or
+                        distribution channels (such as store APIs).</li>
+                    <li>Acts that improperly infringe upon the Developer's legitimate rights concerning non-open-source
+                        portions of the App.</li>
                 </ol>
 
-                <h3>第7条（本規約の変更）</h3>
-                開発者は、必要と判断した場合には、ユーザーへの個別の事前通知なく本規約を変更できるものとします。変更後の利用規約は、本Webサイトまたは本アプリ上に掲載された時点で効力を生じるものとし、変更後に本アプリを利用し続けた場合、ユーザーは改定後の規約に同意したものとみなされます。
+                <h3>Article 7 (Modifications to Terms)</h3>
+                The Developer reserves the right to modify these Terms at any time without individual prior notice to
+                Users. The revised Terms shall become effective upon publication on the official website or within the
+                App. By continuing to use the App after any such revision, Users are deemed to have agreed to the
+                modified Terms.
 
-                <h3>第8条（準拠法および裁判管轄）</h3>
-                本規約の解釈および適用にあたっては、日本法を準拠法とします。<br>
+                <h3>Article 8 (Governing Law and Jurisdiction)</h3>
+                These Terms shall be governed by and construed in accordance with the laws of Japan.<br>
 
-                本サービスまたは本規約に関して開発者とユーザーとの間で生じた一切の紛争については、東京地方裁判所を第一審の専属的合意管轄裁判所とします。
-
+                Any and all disputes arising between the Developer and Users in connection with the Service or these
+                Terms shall be subject to the exclusive jurisdiction of the Tokyo District Court as the court of first
+                instance.
                 <br>
                 <br>
-                制定日: 2026年10月1日
+                Date of Enactment: October 1, 2026
                 <br>
-                開発元: Fidelitica Utilities
+                Developer: Fidelitica Utilities
                 </p>
             </div>
         </section>
@@ -110,6 +158,8 @@
                 <img src="res/notencil_icon5.png" width="36" height="36" alt="">
                 <span> Notencil </span>
             </a>
+            <a href="./terms.html"> <span class="copyright"> Terms of service </span> </a>
+            <a href="./privacy.html"> <span class="copyright"> Privacy policy </span> </a>
             <span class="copyright">© 2026 Fidelitica Utilities</span>
         </div>
     </footer>

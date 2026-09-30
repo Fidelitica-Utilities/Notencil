@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="ja">
 
+<script src="./res/script.js" defer></script>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f5f8ff">
     <meta name="description" content="手書きノートの不満を解決する、オープンソースのノートアプリ Notencil。ファイルはあなたの手元に。PDFにそのまま書き込み。買い切りで、ずっと自由に。">
-    <title>Notencil | プライバシーポリシー</title>
+    <title>Notencil | Privacy Policy</title>
     <link rel="icon" href="res/notencil.ico">
     <link rel="stylesheet" href="res/site.css">
 </head>
@@ -14,15 +16,33 @@
 <body>
     <header class="site-header">
         <div class="wrap nav">
-            <a class="brand" href="#top" aria-label="Notencil ホーム">
+            <a class="brand" href="./index.html" aria-label="Notencil ホーム">
                 <img src="res/notencil_icon5.png" width="36" height="36" alt="">
                 <span>Notencil</span>
             </a>
             <nav class="navlinks" aria-label="メインナビゲーション">
-                <a href="#why">Notencilについて</a>
-                <a href="#open-source">オープンソース</a>
+                <!-- 言語切り替えコンボボックス -->
+                <div class="lang-picker">
+                    <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                        </path>
+                    </svg>
+                    <select id="langSwitch_privacy" aria-label="言語選択">
+                        <option value="en">English</option>
+                        <option value="ja">日本語</option>
+                    </select>
+                    <span class="select-arrow">▼</span>
+                </div>
                 <a class="nav-cta" href="https://github.com/search?q=Notencil&type=repositories" target="_blank"
-                    rel="noreferrer">GitHubを見る
+                    rel="noreferrer">
+                    <svg class="cta-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.08c-3.1.67-3.75-1.32-3.75-1.32-.5-1.28-1.24-1.62-1.24-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.15 1.7 1.15.99 1.69 2.59 1.2 3.22.91.1-.72.39-1.2.7-1.48-2.47-.28-5.07-1.24-5.07-5.5 0-1.21.43-2.2 1.15-2.97-.12-.28-.5-1.41.11-2.93 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.12-1.44 3.04-1.14 3.04-1.14.61 1.52.23 2.65.12 2.93.71.77 1.14 1.76 1.14 2.97 0 4.27-2.6 5.21-5.08 5.49.4.34.75 1.02.75 2.06v3.07c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z" />
+                    </svg>GitHub
                     <span class="arrow">↗</span>
                 </a>
             </nav>
@@ -31,55 +51,73 @@
     <main id="top">
         <section class="hero" id="">
             <div class="wrap">
-                <h2>プライバシーポリシー</h2>
+                <h2>Privacy Policy</h2>
                 <p>
-                    Fidelitica
-                    Utilities（以下「当方」）は、提供するアプリケーション「Notencil」（以下「本アプリケーション」）および当Webサイトにおける利用者のプライバシー情報の取り扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」）を定めます。
+                    Fidelitica Utilities (hereinafter referred to as "we", "us", or "our") establishes this Privacy
+                    Policy (hereinafter referred to as the "Policy") regarding the handling of users' privacy
+                    information in the application "Notencil" (hereinafter referred to as the "Application") and on our
+                    official website.
                 </p>
             </div>
         </section>
 
         <section class="privacy-policy">
             <div class="wrap">
-                <h3>基本方針</h3>
+                <h3>Basic Principles</h3>
                 <ol>
-                    <li>本アプリケーションはストレージへのアクセスを要求しますが、権限はファイル管理の目的のみに使用され、ユーザーの許可なくファイルが外部に送信・収集されることはありません。</li>
-                    <li>本アプリケーションの編集機能は端末上で実行され、クラウド処理やAI利用のため情報がアップロードされることはありません。</li>
+                    <li>The Application requests access to device storage; however, this permission is used solely for
+                        file management purposes. Your files will never be transmitted to external servers or collected
+                        without your explicit permission.</li>
+                    <li>All editing features of the Application run locally on your device. Content and information are
+                        never uploaded for cloud processing, artificial intelligence (AI) training, or AI utilization.
+                    </li>
                 </ol>
 
-                <h3>ユーザーデータの保存について</h3>
+                <h3>Storage of User Data</h3>
                 <p>
-                    本アプリケーションは、利用者のプライバシー保護を最重要方針として設計されています。
+                    The Application is designed with user privacy protection as its core principle.
                 <ol>
-                    <li>本アプリケーションで作成・編集されたノート、PDFファイル等のコンテンツは、すべて単一のファイルに格納され、ユーザーが選択したディレクトリにのみ保存されます。</li>
-                    <li>ユーザーはファイルをクラウドストレージ等 (OneDrive, GoogleDrive等)
-                        に保存またはアップロードすることができますが、アップロードされたデータの管理はユーザーが責任を負うものとします。</li>
-                    <li>当方が管理する外部サーバーへ利用者のファイルデータが自動的に送信・保存されることは一切ありません。</li>
+                    <li>All notes, handwritten strokes, imported PDF documents, and related content created or edited
+                        within the Application are encapsulated within a single file and saved exclusively in the
+                        directory selected by the user.</li>
+                    <li>Users may save or upload files to third-party cloud storage services (such as OneDrive, Google
+                        Drive, etc.); however, users bear full responsibility for the management and synchronization of
+                        any uploaded data.</li>
+                    <li>User files and data are never automatically transmitted to or stored on external servers managed
+                        by us.</li>
                 </ol>
                 </p>
 
-                <h3>情報を収集する場合とその利用目的</h3>
-                本アプリケーションおよび当Webサイトでは、以下の限定的な情報を除き、利用者の個人を特定できる情報を収集しません。
+                <h3>Information Collection and Purposes of Use</h3>
+                The Application and our official website do not collect personally identifiable information, except for
+                the limited circumstances outlined below:
                 <ol>
-                    <li>診断・クラッシュデータ（プラットフォーム提供）</li>
-                    本アプリの品質向上および不具合修正を目的として、配信プラットフォーム（Microsoft Store / Google
-                    Play等）が標準で提供する匿名のクラッシュログや利用統計を参照する場合があります。これらに個人を特定する情報は含まれません。<br>
-                    収集への同意および収集したデータの取り扱いは、プラットフォームの規約に従って適正に行われます。
-
-                    <li>お問い合わせ時の情報</li>
-                    利用者からメールやGitHub等を通じてお問い合わせ・フィードバックをいただいた場合、その回答およびサポート対応のために送信元の情報（メールアドレス、アカウント名等）を利用します。
-
-                    <li>法令に基づく場合</li>
-                    法令に基づき裁判所、警察等の公的機関から正当な手続きによる要請・命令を受けた場合に限り、保有する限定的な情報を法律上最低限の範囲に限り開示することがあります。<br>
+                    <li>Diagnostic and Crash Data (Platform Provided)</li>
+                    To improve application quality and fix defects, we may access aggregated, anonymous crash logs and
+                    usage statistics standardly provided by distribution platforms (such as the Microsoft Store, Google
+                    Play, etc.). These metrics contain no personally identifiable information. Consent for collection
+                    and data handling are managed properly in accordance with the terms and policies of each respective
+                    platform.
+                    <li>Support and Inquiries</li>
+                    When a user contacts us with inquiries or feedback via email, GitHub, or other channels, we use the
+                    information provided (such as email addresses, account usernames, or message contents) solely to
+                    respond and provide support.
+                    <li>Legal Requirements</li>
+                    We may disclose the limited information in our possession only when formal legal requests or orders
+                    are issued by authorized public bodies (such as courts or law enforcement agencies) pursuant to due
+                    process, and only to the minimum extent strictly required by law.<br>
                 </ol>
 
-                <h3>プライバシーポリシーの改定</h3>
+                <h3>Changes to This Privacy Policy</h3>
                 <p>
-                    本ポリシーは、機能追加や法改正等に伴い、予告なく改定されることがあります。重要な変更がある場合は、本Webサイトまたはアプリ内にて告知します。
+                    This Policy may be revised without prior notice due to feature updates, changes in applicable laws,
+                    or operational requirements. If significant changes are made, notifications will be posted on this
+                    website or within the Application.
                 </p>
 
-                <h3>準拠法</h3>
-                <p>本ポリシーの解釈および適用は、日本国の法令に準拠するものとします。</p>
+                <h3>Governing Law</h3>
+                <p>The interpretation and application of this Policy shall be governed by and construed in accordance
+                    with the laws of Japan.</p>
 
                 <!--
                     
@@ -90,8 +128,10 @@
                 * GitHub: https://github.com/ （※リポジトリURLまたはIssueリンク）
                 * 連絡先: （※連絡先メールアドレス）
                 -->
-
-                制定日: 2026年10月1日
+                <p>
+                    Date of Enactment: October 1, 2026
+                    <br>
+                    Developer: Fidelitica Utilities
                 </p>
             </div>
         </section>
@@ -102,6 +142,8 @@
                 <img src="res/notencil_icon5.png" width="36" height="36" alt="">
                 <span> Notencil </span>
             </a>
+            <a href="./terms.html"> <span class="copyright"> Terms of service </span> </a>
+            <a href="./privacy.html"> <span class="copyright"> Privacy policy </span> </a>
             <span class="copyright">© 2026 Fidelitica Utilities</span>
         </div>
     </footer>
