@@ -96,10 +96,21 @@ a {
 }
 
 .nav-cta {
-  padding: 11px 17px;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 5px;
+  padding: 11px 11px;
   border-radius: 11px;
   background: #eef2ff;
-  color: #315de2 !important
+  color: #435bc7 !important
+}
+
+.cta-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  flex-shrink: 0;
 }
 
 .hero {
@@ -599,6 +610,85 @@ a {
 .copyright {
   font-size: 10px;
   color: #98a2b3
+}
+
+
+/* 言語切り替えラッパー */
+.lang-picker {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0 10px 0 30px;
+  /* 左側に地球儀アイコン分のスペース */
+  height: 38px;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.lang-picker:hover {
+  border-color: #ccd7eb;
+  box-shadow: 0 2px 8px rgba(35, 65, 130, .06);
+}
+
+/* 地球儀アイコン */
+.lang-icon {
+  position: absolute;
+  left: 9px;
+  width: 15px;
+  height: 15px;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+/* セレクトボックス本体（デフォルトの矢印を非表示化） */
+.lang-picker select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  padding-right: 14px;
+}
+
+/* カスタム矢印マーク */
+.select-arrow {
+  position: absolute;
+  right: 9px;
+  font-size: 8px;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+/* モバイル表示時の調整（画面幅が狭い場合も表示を維持） */
+@media (max-width: 800px) {
+  .navlinks {
+    display: flex;
+    gap: 8px;
+  }
+
+  .lang-picker {
+    height: 34px;
+    padding: 0 8px 0 26px;
+  }
+
+  .lang-icon {
+    left: 7px;
+    width: 13px;
+    height: 13px;
+  }
+
+  .lang-picker select {
+    font-size: 11px;
+    padding-right: 12px;
+  }
 }
 
 @media(max-width:800px) {
