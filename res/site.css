@@ -3,8 +3,8 @@
 :root {
   --ink: #142444;
   --muted: #657490;
-  --blue: #3567f6;
-  --deep: #264fd0;
+  --blue: #3e6dc4;
+  --deep: #1f3a92;
   --cyan: #67d9f0;
   --line: #e6ebf5;
   --surface: #fff;
@@ -25,7 +25,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: 'DM Sans', 'Noto Sans JP', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   -webkit-font-smoothing: antialiased
 }
 
@@ -62,9 +62,10 @@ a {
   display: flex;
   align-items: center;
   gap: 11px;
+  font-family: "Noto Sans JP";
   font-size: 20px;
   font-weight: 600;
-  letter-spacing: -.6px
+  letter-spacing: -.1px
 }
 
 .logo {
